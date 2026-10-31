@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --heading: #ffffff;     /* NEW: headings in the page body (the header keeps white) */
+    --primary: #00B4D8;
+    --dark: #0c1030;        /* page background */
+    --background: #03045E;  /* cards and sections */
+    --text: #CAF0F8;
+
+    --light: #ffffff;       /* headings */
+    --muted: #9BB8D0;       /* dates, small text */
+    --border: #1d2a6b;      /* lines between sections */
+  
+
+}
+
+body{
+    background-color: var(--dark);
+    color:var(--text);
+}
+                /*=====HEADER======*/
+
+.header .navbar{
+    display:flex;
+    justify-content: space-between;
+    padding: 1.1em 0;
+}
+.header{
+    background: #0C1030;
+    background: linear-gradient(358deg,rgba(12, 16, 48, 1) 23%, rgba(3, 21, 106, 1) 53%, rgba(0, 180, 216, 1) 100%);
+    border-bottom: 2px solid var(--border);
+    border-radius: 0 0 20px 20px;
+    color:var(--light);
+}
+.nav_links ul{
+    display:flex;
+    list-style-type:none;
+}
+.logo a{
+    text-decoration: none;
+    color:var(--light);
+    font-size: x-large;
+    font-weight:bolder; ;
+}
+.logo a:hover{
+    color:var(--primary);
+}
+.nav_links a{
+    color:var(--light);
+    margin-right: 1rem;
+    text-decoration: none;
+    
+}
+.nav_links a:hover{
+    color:var(--primary);
+    
+}
+.container{
+    width: min(1000px, 100% - 2rem);   /* NEW: keeps a 1rem gap at the screen edges on phones */
+    margin-inline: auto;
+}
+.hero{
+    text-align: left;
+    padding:1.2rem 0;
+    line-height: 2rem;
+}
+.hero p{
+    color: var(--text);
+}
+.intro{
+    margin-bottom: 13px;
+}
+.intro em,.logo span{
+    font-style: normal;
+    color:var(--primary);
+    font-weight: bolder;
+}
+
+.hero_buttons{margin-bottom: 10px;}
+.hero_buttons a{
+    text-decoration: none;
+    margin:1.5em;
+    padding:1.1em;
+    border-radius: 20px;
+    
+}
+.primary_button{
+    background-color: var(--primary);
+    color:var(--background);
+    border: 1px solid var(--background);
+}
+.secondry_button{
+    background-color: var(--background);
+    color:var(--primary);
+    border: 1px solid var(--primary);
+}
+.primary_button:hover{
+    background-color: var(--background);
+    color:var(--primary);
+    border: 1px solid var(--primary);  
+}
+.secondry_button:hover{
+    background-color: var(--primary);
+    color:var(--background);
+    border: 1px solid var(--background);
+}
+h2{
+    color:var(--heading);
+    font-weight: bolder;
+}
+                /*=====ABOUT ME======*/
+
+#about_me{
+    padding:1.2em 0;
+    line-height: 1em;
+    font-size: large;
+    border-bottom: 1px solid var(--border);
+}
+#about_me h2, .education_timeline h2, #projects h2, #contactme h2, .skils h2{   /*ALL H2 STYLES*/
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+.education_timeline{
+    padding:1.2em 0;
+    display:grid;
+    border-bottom: 1px solid var(--border);
+}
+.education_details{
+    width: auto;
+    padding:1em;
+    background-color: var(--background);
+    margin-bottom: 1.2em;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    border-left: 3px solid var(--primary);
+}
+.education_details h3{
+    color:var(--heading);
+    font-weight: bolder;
+    font-size: larger;
+}
+.education_details .date{
+    color:var(--primary);
+    margin-left: 5px;
+    font-size: large;
+}
+
+                /*=====PROJECTS======*/
+
+#projects{
+    border-bottom: 1px solid var(--border);
+}
+.project_details{
+    display: grid; 
+    gap: 1rem; 
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    margin-bottom: 2em;
+    
+}
+.projects{
+    background-color: var(--background);
+    padding:1.2em;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    
+}
+.projects:hover{
+    border: 2px solid var(--primary);
+}
+.projects h3{
+    color:var(--heading);
+    margin-bottom: 1em;
+    font-weight: bolder;
+    font-size: 1.35rem; 
+}
+.projects a{
+    margin-top: auto;
+    color:var(--primary);
+    padding-top: .4rem;
+}
+
+                /*=====SKILS======*/
+.skils{
+    padding:1.2em 0;
+    border-bottom: 1px solid var(--border);
+    
+}
+.languages{
+    display: grid; 
+    gap: 2em; 
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+.langIUse{
+    margin-right: 100px;
+}
+.languages h3{
+    font-size: 1rem; 
+    color: var(--muted); 
+    font-weight: 500; 
+    margin-bottom: .7rem;
+}
+.langIUse ul, .learningNow ul{
+    list-style-type: none;
+    display:flex;
+}
+.langIUse ul li, .learningNow ul li{
+    margin-right: 1em;
+    padding: .7em;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+
+                /*=====CONTACT ME======*/
+
+#contactme{
+    padding:1.2em 0;
+}
+#contactme p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+.email{
+    font-size: clamp(1.1rem, 6vw, 2.5em);
+    overflow-wrap: anywhere;
+    text-decoration: none;
+    color:var(--primary);
+}
+.email:hover{
+    color:var(--heading)
+}
+.github{
+    font-size: 1.5em;
+    text-decoration: none;
+    color:var(--primary);
+}
+.github:hover{
+    color:var(--heading);
+}
+
+                /*=====FOOTER======*/
+
+.footer{
+    text-align: center;
+    padding:2em;
+    border-top: 1px solid var(--border);
+}
+
+/* ====================================================================
+   NEW CODE STARTS HERE (theme button + mobile menu)
+   ==================================================================== */
+
+/* STEP 6: LIGHT THEME COLORS
+   Palette used: "Shades of Gray" (#EEEEEE, #DDDDDD, #BABABA).
+   When <html> has data-theme="light", these values replace the dark ones. */
+:root[data-theme="light"]{
+    --dark: #EEEEEE;        /* page background (lightest gray) */
+    --background: #DDDDDD;  /* cards (next gray) */
+    --border: #BABABA;      /* lines (mid gray) */
+    --text: #0c1030;        /* body text: your dark navy, very easy to read */
+    --muted: #4b5563;       /* small gray text, dark enough to read */
+    --primary: #005F8F;     /* darker blue: bright cyan is too faint on light gray */
+    --heading: #0c1030;     /* headings */
+}
+
+/* STEP 7: KEEP THE HEADER DARK IN BOTH THEMES
+   We re-declare the dark colors just inside .header, so everything in it
+   (logo, links, hero text, buttons) keeps its look in light mode. */
+.header{
+    --primary: #00B4D8;
+    --background: #03045E;
+    --text: #CAF0F8;
+    --light: #ffffff;
+    --heading: #ffffff;
+    --menu-bg: #0c1030;     /* dropdown menu background */
+}
+
+/* STEP 7b: LIGHT-MODE HEADER
+   In light mode the header gets its own gradient made only from the
+   "Shades of Gray" palette, and its text/button colors switch to dark. */
+:root[data-theme="light"] .header{
+    background: linear-gradient(358deg, #EEEEEE 23%, #DDDDDD 45%, #CCCCCC 70%, #BABABA 100%);
+    --primary: #005F8F;
+    --background: #EEEEEE;
+    --text: #0c1030;
+    --light: #0c1030;
+    --heading: #0c1030;
+    --menu-bg: #EEEEEE;
+}
+
+/* STEP 8: SMOOTH COLOR CHANGE when switching theme */
+html{ scroll-behavior: smooth; }
+body, .projects, .education_details{
+    transition: background-color .3s, color .3s, border-color .3s;
+}
+
+/* STEP 9: NAVBAR LAYOUT + THE TWO BUTTONS */
+.menu{
+    display: flex;
+    align-items: center;
+}
+.theme_button, .menu_button{
+    background: transparent;
+    color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: 10px;
+    padding: .35em .7em;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: .5rem;
+}
+.theme_button:hover, .menu_button:hover{
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.menu_button{ display: none; }   /* hidden on desktop */
+
+/* STEP 10: SKILLS LISTS WRAP instead of overflowing on small screens */
+.langIUse ul, .learningNow ul{ flex-wrap: wrap; }
+.langIUse ul li, .learningNow ul li{ margin-bottom: .6em; }
+
+/* STEP 11: PHONE LAYOUT (screens 700px wide or smaller) */
+@media (max-width: 700px){
+    .navbar{ position: relative; align-items: center; }   /* dropdown positions itself from here */
+    .menu_button{ display: inline-block; }                 /* show the menu button */
+
+    .nav_links{
+        display: none;              /* closed by default */
+        position: absolute;
+        top: 100%;                  /* directly under the navbar */
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: var(--menu-bg);
+        border: 1px solid var(--border);
+        border-radius: 0 0 14px 14px;   /* rounded bottom corners only */
+        padding: .5rem 1rem;
+    }
+    .nav_links.open{ display: block; }   /* JavaScript adds "open" when the button is clicked */
+    .nav_links ul{ flex-direction: column; }
+    .nav_links a{
+        display: block;
+        padding: .8em 0;
+        margin-right: 0;
+    }
+    .langIUse{ margin-right: 0; }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadew Wijesekara</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- STEP 1: Remember the theme. This tiny script runs BEFORE the page is drawn,
+         so a saved light theme never flashes dark first. -->
+    <script>
+        try {
+            if (localStorage.getItem("theme") === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+            }
+        } catch (e) {}
+    </script>
+    <!-- STEP 2: Load the button logic. "defer" = wait until the page is ready. -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header"><!--header and hero-->
+        <div class="navbar container">
+            <div class="logo">
+                <a href="index.html" >SW<span>.</span></a>
+            </div>
+            <div class="menu">
+                <nav class="nav_links" id="nav-links"> <!-- STEP 3: id lets the menu button find this list -->
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about_me">About Me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contactme">Contact ME</a></li>
+                    </ul>
+                </nav>
+
+                <!-- STEP 4: Theme button. It sits OUTSIDE the nav list, so it never goes into the dropdown. -->
+                <button class="theme_button" id="theme-toggle" type="button" aria-label="Switch theme">☀️</button>
+
+                <!-- STEP 5: Menu button. Hidden on desktop, shown on phones (see CSS). -->
+                <button class="menu_button" id="menu-toggle" type="button"
+                        aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+            </div>
+        </div>    
+   
+    
+        <section class="hero container" id="home">
+            <div class="intro">
+                <h1>Hi I'm <em>Sadew Wijesekara</em>.</h1>
+                <h2>I build <em>tools</em> and games with code.</h2>
+                <p>I work in Python, C, PHP, SQL and JavaScript. I'm working through CS50 and starting at UCSC in 2027.</p>
+            </div>
+            <div class="hero_buttons">
+                <a class="primary_button" href="">Grab my CV</a>
+                <a class="secondry_button" href="#contactme">Contact Me</a>
+            </div>
+        </section>
+    </header>   
+    <main>
+        <section class="container" id="about_me">   <!--About me-->
+            <div>
+                <h2>About Me</h2>
+                <p>I started programming in 2018 because I love this field . I work in Python, C, PHP and SQL, and I use HTML and CSS when a project needs an interface. I'm now learning JavaScript so I can build more interactive applications and connect the front end to the back-end systems I already know.</p>
+                <p>I like understanding how things work underneath, which is why I practise in both C and higher-level languages. I'm looking for an internship or a junior role where I can keep growing and contribute quickly.</p>
+            </div>
+        </section> 
+        
+        <section class="education_timeline  container">
+            <h2>Education</h2>
+            <div class="education_details">
+                <h3>Richmond College</h3>
+                <p class="date">2012 - 2023</p>
+                <p>GCE O/L examination : 7As and 2Bs.</p>
+            </div>
+            <div class="education_details">
+                <h3>Richmond College</h3>
+                <p class="date">2023 - 2025</p>
+                <p>GCE A/L examination : 2As and 1B.</p>
+            </div>
+            <div class="education_details">
+                <h3>University of Colombo School of Computer Science</h3>
+                <p class="date">Starting 2027</p>
+                <p>Selected for the 2026 batch. Expected to begin in April 2027.</p>
+            </div>
+        </section><br>
+        <section class="container" id="projects">    <!--Projects-->
+            <h2>Projects</h2>
+            <div class="project_details">
+                <div class="projects">
+                    <h3>Future Me</h3>
+                    <p><strong>Future Me</strong>. An app that predicts which careers suit you best and shows a step-by-step path to become a professional in each one. If you have a job in mind that isn't listed, you can ask the built-in chatbot and it will show the skills you need and the path to get there. I built it to help students and beginners who don't know what to study or where to start. Built with using Python Language.</p>
+                    <a href="#">View →</a>
+                </div>
+                <div class="projects">
+                    <h3>The Journey of Red Hat Boy (2D game)</h3>
+                    <p><strong>The Journey of Red Hat Boy</strong>. A 2D endless-runner game where you jump over obstacles to survive and reach a score of 500 to win. I built it to practise JavaScript and learn how games work. It uses timed loops for sprite animation and a scrolling background, randomly generated obstacles with varied gaps, and collision detection based on the player's height and position. It also has sound effects, a start screen, a game-over screen and a win screen. Built with HTML, CSS and JavaScript.</p>
+                    <a href="#">View →</a>
+                </div>
+                <div class="projects">
+                    <h3>CS50</h3>
+                    <p><strong>CS50 (in progress)</strong>. Harvard's introduction to computer science. I'm working through the problem sets in C, Python and SQL, covering algorithms, data structures and web development.</p>
+                    <a href="#">Details →</a>
+                </div>
+            </div>
+        </section>
+        <section class="skils container">  <!--Skils-->
+            <h2>Skills</h2>
+            <div class="languages">
+                <div class="langIUse">
+                    <h3>Languages I Use</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div  class="learningNow">
+                    <h3>Learning Now</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>C</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+            </div>    
+        </section>
+        <section class="container" id="contactme">  <!--Contact Now-->
+            <div>
+                <h2>Let's talk code</h2>
+                <p>Have a role, a project or a question? Send an email and I'll reply within two days.</p>
+                <a class="email" href="mailto:sadewwijesekara2@gmail.com">sadewwijesekara2@gmail.com</a><br>
+                <a class="github" href="https://github.com/sadewwijesekara2-collab" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer container">
+        <p> &copy; 2026 Sadew Wijesekara. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>
